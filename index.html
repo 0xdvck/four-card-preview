@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+
+    <title>Frontend Mentor | Four card feature section</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Poppins:200,400,600");
+      :root {
+        --c-primary-red: hsl(0, 78%, 62%);
+        --c-primary-cyan: hsl(180, 62%, 55%);
+        --c-primary-orange: hsl(34, 97%, 64%);
+        --c-primary-blue: hsl(212, 86%, 64%);
+
+        --c-shadow-blue: hsl(213, 47%, 67%);
+
+        --c-neutral-very-dark-blue: hsl(234, 12%, 34%);
+        --c-neutral-grayish-blue: hsl(229, 6%, 66%);
+        --c-neutral-light-gray: hsl(0, 0%, 98%);
+        --c-neutral-white: hsl(0, 0%, 100%);
+
+        --font-semibold: 600;
+        --font-extralight: 200;
+        --font-normal: 400;
+
+        font-size: 62.5%;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--c-neutral-light-gray);
+      }
+
+      main {
+        margin: 0 3.2rem 0 3.2rem;
+      }
+
+      .title-container {
+        text-align: center;
+        margin-bottom: 5rem;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 31rem;
+      }
+
+      .title-container__title {
+        /* styles for the title element */
+        font-weight: var(--font-extralight);
+        font-size: 2.4rem;
+        line-height: 3.6rem;
+      }
+
+      .title-container__title:nth-of-type(2) {
+        margin-bottom: 1.6rem;
+        font-weight: var(--font-semibold);
+      }
+
+      .title-container__subtitle {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: var(--font-normal);
+        line-height: 2.5rem;
+        color: var(--c-neutral-very-dark-blue);
+        /* styles for the subtitle element */
+      }
+
+      .card-container {
+        /* styles for the card container element */
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        align-items: center;
+      }
+
+      .card-container__stack {
+        /* styles for the card element */
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        align-items: center;
+      }
+
+      .card-container__card {
+        /* styles for the card element */
+        position: relative;
+        border-top: 0.5rem solid;
+        border-radius: 0.8rem;
+        height: 22rem;
+        background-color: var(--c-neutral-white);
+        padding: 0 2.8rem 0 2.8rem;
+        border-color: var(--c-primary-blue);
+        box-shadow: 0 1.5rem 3rem -1.1rem var(--c-shadow-blue);
+        max-width: 31rem;
+      }
+
+      .card-container__card-title {
+        font-size: 2rem;
+        font-weight: var(--font-semibold);
+        /* styles for the card title element */
+      }
+
+      .card-container__card-description {
+        font-size: 1.3rem;
+        line-height: 2.3rem;
+        color: var(--c-neutral-very-dark-blue);
+        /* styles for the card description element */
+      }
+
+      .card-container__card-icon {
+        position: absolute;
+        bottom: 2.8rem;
+        right: 2.8rem;
+        /* styles for the card icon element */
+      }
+
+      @media only screen and (min-width: 1024px) {
+        .card-container {
+          /* styles for the card container element */
+          display: flex;
+          flex-direction: row;
+          gap: 2.5rem;
+          justify-content: center;
+        }
+
+        .title-container {
+          max-width: 54rem;
+        }
+
+        .card-container__card {
+          max-width: 35rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="title-container">
+        <div class="title-container__title">Reliable, efficient delivery</div>
+        <div class="title-container__title">Powered by Technology</div>
+        <div class="title-container__subtitle">
+          Our Artificial Intelligence powered tools use millions of project data
+          points to ensure that your project is successful
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card-container__card">
+          <h3 class="card-container__card-title">Supervisor Monitors</h3>
+          <p class="card-container__card-description">
+            Monitors activity to identify project roadblocks
+          </p>
+          <div class="card-container__card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="57" height="57">
+              <g fill="none">
+                <path
+                  fill="#474F54"
+                  d="M64 0v41.25l-3.75 3.875H3.75L0 41.25V0z"
+                />
+                <path fill="#32393F" d="M64 0v41.25l-3.75 3.875H32V0z" />
+                <path fill="#DADAE5" d="M22.625 50.875h18.75v11.25h-18.75z" />
+                <path fill="#C9C9D3" d="M32 50.875h9.375v11.25H32z" />
+                <path fill="#EFEFF4" d="M0 41.25h64v11.5H0z" />
+                <path fill="#DADAE5" d="M32 41.25h32v11.5H32z" />
+                <path fill="#EFEFF4" d="M15.125 60.25h33.75V64h-33.75z" />
+                <path fill="#DADAE5" d="M32 60.25h16.875V64H32z" />
+                <path
+                  fill="#549EF2"
+                  d="M20.75 7.5c-7.236 0-13.125 5.889-13.125 13.125S13.514 33.75 20.75 33.75s13.125-5.889 13.125-13.125S27.986 7.5 20.75 7.5zm0 18.75a5.631 5.631 0 01-5.625-5.625A5.631 5.631 0 0120.75 15a5.631 5.631 0 015.625 5.625 5.631 5.631 0 01-5.625 5.625z"
+                />
+                <g fill="#377FD2">
+                  <path
+                    d="M45.125 7.5H56.5v3.75H45.125zM37.625 7.5h3.75v3.75h-3.75zM45.125 22.5H56.5v3.75H45.125zM37.625 22.5h3.75v3.75h-3.75zM37.625 15H56.5v3.75H37.625zM37.625 30H56.5v3.75H37.625z"
+                  />
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="card-container__stack">
+          <div class="card-container__card">
+            <h3 class="card-container__card-title">Supervisor Monitors</h3>
+            <p class="card-container__card-description">
+              Monitors activity to identify project roadblocks
+            </p>
+            <div class="card-container__card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="57" height="57">
+                <g fill="none">
+                  <path
+                    fill="#474F54"
+                    d="M64 0v41.25l-3.75 3.875H3.75L0 41.25V0z"
+                  />
+                  <path fill="#32393F" d="M64 0v41.25l-3.75 3.875H32V0z" />
+                  <path fill="#DADAE5" d="M22.625 50.875h18.75v11.25h-18.75z" />
+                  <path fill="#C9C9D3" d="M32 50.875h9.375v11.25H32z" />
+                  <path fill="#EFEFF4" d="M0 41.25h64v11.5H0z" />
+                  <path fill="#DADAE5" d="M32 41.25h32v11.5H32z" />
+                  <path fill="#EFEFF4" d="M15.125 60.25h33.75V64h-33.75z" />
+                  <path fill="#DADAE5" d="M32 60.25h16.875V64H32z" />
+                  <path
+                    fill="#549EF2"
+                    d="M20.75 7.5c-7.236 0-13.125 5.889-13.125 13.125S13.514 33.75 20.75 33.75s13.125-5.889 13.125-13.125S27.986 7.5 20.75 7.5zm0 18.75a5.631 5.631 0 01-5.625-5.625A5.631 5.631 0 0120.75 15a5.631 5.631 0 015.625 5.625 5.631 5.631 0 01-5.625 5.625z"
+                  />
+                  <g fill="#377FD2">
+                    <path
+                      d="M45.125 7.5H56.5v3.75H45.125zM37.625 7.5h3.75v3.75h-3.75zM45.125 22.5H56.5v3.75H45.125zM37.625 22.5h3.75v3.75h-3.75zM37.625 15H56.5v3.75H37.625zM37.625 30H56.5v3.75H37.625z"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="card-container__card">
+            <h3 class="card-container__card-title">Supervisor Monitors</h3>
+            <p class="card-container__card-description">
+              Monitors activity to identify project roadblocks
+            </p>
+            <div class="card-container__card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="57" height="57">
+                <g fill="none">
+                  <path
+                    fill="#474F54"
+                    d="M64 0v41.25l-3.75 3.875H3.75L0 41.25V0z"
+                  />
+                  <path fill="#32393F" d="M64 0v41.25l-3.75 3.875H32V0z" />
+                  <path fill="#DADAE5" d="M22.625 50.875h18.75v11.25h-18.75z" />
+                  <path fill="#C9C9D3" d="M32 50.875h9.375v11.25H32z" />
+                  <path fill="#EFEFF4" d="M0 41.25h64v11.5H0z" />
+                  <path fill="#DADAE5" d="M32 41.25h32v11.5H32z" />
+                  <path fill="#EFEFF4" d="M15.125 60.25h33.75V64h-33.75z" />
+                  <path fill="#DADAE5" d="M32 60.25h16.875V64H32z" />
+                  <path
+                    fill="#549EF2"
+                    d="M20.75 7.5c-7.236 0-13.125 5.889-13.125 13.125S13.514 33.75 20.75 33.75s13.125-5.889 13.125-13.125S27.986 7.5 20.75 7.5zm0 18.75a5.631 5.631 0 01-5.625-5.625A5.631 5.631 0 0120.75 15a5.631 5.631 0 015.625 5.625 5.631 5.631 0 01-5.625 5.625z"
+                  />
+                  <g fill="#377FD2">
+                    <path
+                      d="M45.125 7.5H56.5v3.75H45.125zM37.625 7.5h3.75v3.75h-3.75zM45.125 22.5H56.5v3.75H45.125zM37.625 22.5h3.75v3.75h-3.75zM37.625 15H56.5v3.75H37.625zM37.625 30H56.5v3.75H37.625z"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="card-container__card">
+          <h3 class="card-container__card-title">Supervisor Monitors</h3>
+          <p class="card-container__card-description">
+            Monitors activity to identify project roadblocks
+          </p>
+          <div class="card-container__card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="57" height="57">
+              <g fill="none">
+                <path
+                  fill="#474F54"
+                  d="M64 0v41.25l-3.75 3.875H3.75L0 41.25V0z"
+                />
+                <path fill="#32393F" d="M64 0v41.25l-3.75 3.875H32V0z" />
+                <path fill="#DADAE5" d="M22.625 50.875h18.75v11.25h-18.75z" />
+                <path fill="#C9C9D3" d="M32 50.875h9.375v11.25H32z" />
+                <path fill="#EFEFF4" d="M0 41.25h64v11.5H0z" />
+                <path fill="#DADAE5" d="M32 41.25h32v11.5H32z" />
+                <path fill="#EFEFF4" d="M15.125 60.25h33.75V64h-33.75z" />
+                <path fill="#DADAE5" d="M32 60.25h16.875V64H32z" />
+                <path
+                  fill="#549EF2"
+                  d="M20.75 7.5c-7.236 0-13.125 5.889-13.125 13.125S13.514 33.75 20.75 33.75s13.125-5.889 13.125-13.125S27.986 7.5 20.75 7.5zm0 18.75a5.631 5.631 0 01-5.625-5.625A5.631 5.631 0 0120.75 15a5.631 5.631 0 015.625 5.625 5.631 5.631 0 01-5.625 5.625z"
+                />
+                <g fill="#377FD2">
+                  <path
+                    d="M45.125 7.5H56.5v3.75H45.125zM37.625 7.5h3.75v3.75h-3.75zM45.125 22.5H56.5v3.75H45.125zM37.625 22.5h3.75v3.75h-3.75zM37.625 15H56.5v3.75H37.625zM37.625 30H56.5v3.75H37.625z"
+                  />
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
